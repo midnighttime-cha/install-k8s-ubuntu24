@@ -96,7 +96,8 @@ sudo kubeadm init \
   --pod-network-cidr=10.244.0.0/16 \
   --cri-socket unix:///var/run/cri-dockerd.sock
 ```
-การตั้งค่า kubectl และแก้ปัญหา TLS Certificateหากพบ Error "tls: failed to verify certificate" ให้รันคำสั่งลบของเก่าแล้วคัดลอกใหม่ดังนี้:# 1. ลบไฟล์คอนฟิกเดิมที่ค้างอยู่
+การตั้งค่า kubectl และแก้ปัญหา TLS Certificateหากพบ Error "tls: failed to verify certificate" ให้รันคำสั่งลบของเก่าแล้วคัดลอกใหม่ดังนี้:
+1. ลบไฟล์คอนฟิกเดิมที่ค้างอยู่
 ```bash
 rm -rf $HOME/.kube
 ```
