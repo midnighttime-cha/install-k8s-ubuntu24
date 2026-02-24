@@ -18,7 +18,7 @@ sudo hostnamectl set-hostname k8s-worker-1
 ```bash
 sudo hostnamectl set-hostname k8s-worker-2
 ```
-ปิด SwapKubernetes จำเป็นต้องปิด Swap เพื่อการจัดการหน่วยความจำที่แม่นยำ
+ปิด Swap เนื่องจาก Kubernetes จำเป็นต้องปิด Swap เพื่อการจัดการหน่วยความจำที่แม่นยำ
 ```bash
 sudo swapoff -a
 sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
