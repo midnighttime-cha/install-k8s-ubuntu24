@@ -18,8 +18,9 @@ sudo hostnamectl set-hostname k8s-worker-1
 ```bash
 sudo hostnamectl set-hostname k8s-worker-2
 ```
-ปิด SwapKubernetes จำเป็นต้องปิด Swap เพื่อการจัดการหน่วยความจำที่แม่นยำsudo swapoff -a
+ปิด SwapKubernetes จำเป็นต้องปิด Swap เพื่อการจัดการหน่วยความจำที่แม่นยำ
 ```bash
+sudo swapoff -a
 sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
 ตั้งค่า Network สำหรับ Bridgingcat <<EOF | sudo tee /etc/modules-load.d/k8s.conf
 overlay
